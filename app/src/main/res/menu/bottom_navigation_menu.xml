@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_watchlist"
+        android:icon="@drawable/menu_icon"
+        android:title="Watchlist" />
+
+    <item
+        android:id="@+id/navigation_orders"
+        android:icon="@drawable/orders"
+        android:title="Orders" />
+
+    <item
+        android:id="@+id/navigation_portfolio"
+        android:icon="@drawable/portfolio"
+        android:title="Portfolio" />
+
+    <item
+        android:id="@+id/navigation_funds"
+        android:icon="@drawable/rupee"
+        android:title="Funds" />
+
+    <item
+        android:id="@+id/navigation_invest"
+        android:icon="@drawable/invest"
+        android:title="Invest" />
+</menu>
