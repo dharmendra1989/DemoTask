@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             state.error?.let {
-
+                binding.rlProfitLoss.visibility = View.GONE
             }
         }
 
