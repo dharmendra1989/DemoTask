@@ -4,14 +4,13 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.demo.android.model.ApiResponse
 import com.demo.android.repository.MyRepository
 import com.demo.android.utils.UiState
 import dagger.hilt.android.lifecycle.HiltViewModel
-import javax.inject.Inject
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
@@ -36,7 +35,7 @@ class MainViewModel @Inject constructor(
 
         viewModelScope.launch(Dispatchers.IO + handler) {
             try {
-                val response: ApiResponse = repository.getData()
+                val response = repository.getData()
                 _uiState.postValue(UiState(data = response))
             } catch (e: Exception) {
                 _uiState.postValue(

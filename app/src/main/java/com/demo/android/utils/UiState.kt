@@ -4,6 +4,6 @@ import com.demo.android.model.UserHolding
 
 data class UiState(
     val isLoading: Boolean = false,
-    val data: ApiResponse? = null,
+    val data: List<UserHolding>? = null,
     val error: String? = null
 )

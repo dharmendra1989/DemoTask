@@ -5,7 +5,7 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.demo.android.databinding.ActivityMainBinding
-import com.demo.android.model.ApiResponse
+import com.demo.android.model.UserHolding
 import com.demo.android.ui.fragment.ViewPagerAdapter
 import com.demo.android.utils.Constants
 import com.demo.android.viewmodel.MainViewModel
@@ -16,7 +16,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val viewModel: MainViewModel by viewModels()
-    private var apiResponse: ApiResponse? = null
+    private var apiResponse: List<UserHolding>? = null
     private var flag: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             if (state.isLoading) {
             }
 
-            state.data?.data?.userHolding?.let {
+            state.data?.let {
                 apiResponse = state.data
                 var currentValue = 0.0
                 var totalInvestment = 0.0

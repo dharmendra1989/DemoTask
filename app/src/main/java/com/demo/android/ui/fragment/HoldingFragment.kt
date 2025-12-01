@@ -34,7 +34,7 @@ class HoldingFragment : Fragment() {
                 // binding.progressBar.visibility = View.VISIBLE
             }
 
-            state.data?.data?.userHolding?.let {
+            state.data?.let {
                 holdingAdapter = HoldingAdapter(requireActivity(), it)
                 binding.rvHolding.adapter = holdingAdapter
                 Log.e("jbgivcfrx", it.toString())
