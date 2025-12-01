@@ -54,6 +54,18 @@ class MainActivity : AppCompatActivity() {
                 binding.tvTodayProfitLoss.text =
                     "₹ ${Constants.formatDoubleAmount(currentValue - totalInvestment)}"
                 binding.tvTotalProfit.text = "₹ ${Constants.formatDoubleAmount(totalPln)}"
+
+                if ((currentValue - totalInvestment) > 0) {
+                    binding.tvTodayProfitLoss.setTextColor(getColor(R.color.green))
+                } else {
+                    binding.tvTodayProfitLoss.setTextColor(getColor(R.color.red))
+                }
+
+                if ((totalPln) > 0) {
+                    binding.tvTotalProfit.setTextColor(getColor(R.color.green))
+                } else {
+                    binding.tvTotalProfit.setTextColor(getColor(R.color.red))
+                }
             }
 
             state.error?.let {
