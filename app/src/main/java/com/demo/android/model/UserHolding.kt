@@ -1,9 +1,10 @@
 package com.demo.android.model
 
 import androidx.room.Entity
+import androidx.room.Index
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "tbl_holding")
+@Entity(tableName = "tbl_holding",indices = [Index(value = ["symbol"], unique = true)])
 data class UserHolding(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,

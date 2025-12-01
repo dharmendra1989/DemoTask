@@ -5,6 +5,7 @@ import androidx.room.Room
 import com.demo.android.api.ApiService
 import com.demo.android.db.AppDatabase
 import com.demo.android.db.HoldingsDao
+import com.demo.android.repository.MyRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
